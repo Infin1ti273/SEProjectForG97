@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_211" class="java.beans.XMLDecoder">
+ <object class="java.util.Vector">
+  <void method="add">
+   <object class="data.User" id="User0">
+    <void class="data.User" method="getField">
+     <string>qmNumber</string>
+     <void method="set">
+      <object idref="User0"/>
+      <int>123456789</int>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>fullName</string>
+     <void method="set">
+      <object idref="User0"/>
+      <string>first</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>email</string>
+     <void method="set">
+      <object idref="User0"/>
+      <string>aaa@qmul.ac.uk</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>needToPay</string>
+     <void method="set">
+      <object idref="User0"/>
+      <string>false</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="data.User" id="User1">
+    <void class="data.User" method="getField">
+     <string>qmNumber</string>
+     <void method="set">
+      <object idref="User1"/>
+      <int>111111111</int>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>fullName</string>
+     <void method="set">
+      <object idref="User1"/>
+      <string>second</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>email</string>
+     <void method="set">
+      <object idref="User1"/>
+      <string>bbb@qmul.ac.uk</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>needToPay</string>
+     <void method="set">
+      <object idref="User1"/>
+      <string>false</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="data.User" id="User2">
+    <void class="data.User" method="getField">
+     <string>qmNumber</string>
+     <void method="set">
+      <object idref="User2"/>
+      <int>222222222</int>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>fullName</string>
+     <void method="set">
+      <object idref="User2"/>
+      <string>third</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>email</string>
+     <void method="set">
+      <object idref="User2"/>
+      <string>ccc@qmul.ac.uk</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>needToPay</string>
+     <void method="set">
+      <object idref="User2"/>
+      <string>false</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="data.User" id="User3">
+    <void class="data.User" method="getField">
+     <string>qmNumber</string>
+     <void method="set">
+      <object idref="User3"/>
+      <int>333333333</int>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>fullName</string>
+     <void method="set">
+      <object idref="User3"/>
+      <string>second</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>email</string>
+     <void method="set">
+      <object idref="User3"/>
+      <string>ddd@qmul.ac.uk</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>needToPay</string>
+     <void method="set">
+      <object idref="User3"/>
+      <string>false</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="data.User" id="User4">
+    <void class="data.User" method="getField">
+     <string>qmNumber</string>
+     <void method="set">
+      <object idref="User4"/>
+      <int>444444444</int>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>fullName</string>
+     <void method="set">
+      <object idref="User4"/>
+      <string>second</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>email</string>
+     <void method="set">
+      <object idref="User4"/>
+      <string>eee@qmul.ac.uk</string>
+     </void>
+    </void>
+    <void class="data.User" method="getField">
+     <string>needToPay</string>
+     <void method="set">
+      <object idref="User4"/>
+      <string>false</string>
+     </void>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

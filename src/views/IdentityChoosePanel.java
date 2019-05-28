@@ -1,36 +1,33 @@
 package views;
 
+import views.components.GotoButton;
+
 import javax.swing.*;
-
-
 import java.awt.*;
 
-
 class IdentityChoosePanel extends JPanel {
-	//next state
-	private JPanel managerPanel;
-	private JPanel borrowPanel;
+	private StationPanel stationPanel = new StationPanel();
+	private ManagerLoginPanel managerLoginPanel = new ManagerLoginPanel();
 
-	IdentityChoosePanel(JPanel managerPanel, JPanel borrowPanel) {
-//		JFrame initialInterface = new JFrame("Welcome to use QM scooter system");
-		this.managerPanel = managerPanel;
-		this.borrowPanel = borrowPanel;
-		this.setLayout(new GridLayout(3,1));
-		MainPanel mainPanel = new MainPanel();
+	IdentityChoosePanel() {
+		this.setLayout(new GridLayout(3, 1));
 		this.add(new JPanel());
-		this.add(mainPanel);
+		this.add(new MainPanel());
 		this.add(new JPanel());
-	
+
 	}
+
 	class MainPanel extends JPanel {
-		MainPanel(){          
-		this.setLayout(new GridLayout(1,2));
-		GotoButton manager = new GotoButton("Manager", managerPanel);
-		GotoButton user = new GotoButton("User", borrowPanel);
-		manager.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		user.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		this.add(manager);
-		this.add(user);
+		MainPanel() {
+			GotoButton manager = new GotoButton("Manager", managerLoginPanel);
+			manager.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+			GotoButton user = new GotoButton("User", stationPanel);
+			user.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+
+			this.setLayout(new GridLayout(1, 2));
+			this.add(manager);
+			this.add(user);
 		}
-    }
+	}
+
 }

@@ -1,20 +1,56 @@
 package data;
 
+/**
+ * Entity class used to present scooters
+ */
 public class Scooter {
+	/**
+	 * the scooter's id
+	 */
 	public int id;
-	public int used; // 1为已被用，0为未被用
-	
-	public Scooter(int id, int used) {
-		this.id = id;
-		this.used = used;
+	/**
+	 * if the scooter is used, when a new scooter is created, this field should be 0
+	 */
+	public int used;
+
+	public Scooter() {
+
 	}
-	
+
+	/**
+	 * Create a scooter with it's id
+	 *
+	 * @param id scooter's id
+	 */
+	public Scooter(int id) {
+		this.id = id;
+		this.used = 0;
+	}
+
+	/**
+	 * Get the scooter id
+	 *
+	 * @return scooter id
+	 */
 	public int getId() {
 		return this.id;
 	}
-	
-	public int ifUsed() {
-		return used == 1 ? 1 : 0;
+
+	/**
+	 * Get if the scooter is used
+	 *
+	 * @return use state of scooter
+	 */
+	public int getUsed() {
+		return used;
 	}
 
+	/**
+	 * Change the scooter use state
+	 *
+	 * @param used use state of scooter
+	 */
+	public void setUsed(int used) {
+		this.used = used;
+	}
 }

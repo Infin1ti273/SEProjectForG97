@@ -1,9 +1,19 @@
+import data.AppData;
 import views.Windows;
 
+/**
+ * The main class of the program
+ */
 public class Entrance {
 
+    /**
+     * The main method of the program.
+     * First load data from local files, then initiate the GUI
+     *
+     * @param args input arguments for opening program
+     */
     public static void main(String[] args) {
-        //GUI
+        new AppData();
         new Windows();
     }
 }
