@@ -10,7 +10,6 @@ import java.util.Date;
 /**
  * Control Class
  * Manage the generation, text output, quires and analysis of transactions.
- *
  */
 public class TransactionManage extends AppData {
     /**
@@ -57,6 +56,7 @@ public class TransactionManage extends AppData {
 
     /**
      * Check if the user's usage has expired by analyzing it's transactions
+     *
      * @return 0: not expired, 1: single usage expired, 2: total usage expired
      */
     public static int checkIfExpired() {
@@ -76,6 +76,7 @@ public class TransactionManage extends AppData {
     /**
      * Check if the used have got a single time expiry
      * The maximum single usage time is based on the const SINGLE_EXPIRED.
+     *
      * @return true: single time expired, false: not single time expired
      */
     private static boolean ifSingleTimeExpired() {
@@ -89,6 +90,7 @@ public class TransactionManage extends AppData {
     /**
      * Check if the used have got a total time expiry.
      * The maximum total usage time is based on the const TOTAL_EXPIRED.
+     *
      * @return true: total time expired, false: not total time expired
      */
     private static boolean ifTotalExpired() {
@@ -97,9 +99,9 @@ public class TransactionManage extends AppData {
         long totalDiff = 0;
         Transaction takeTransaction = null;
 
-        for (int i = 0; i < usageList.size(); i ++) {
-            if (!usageList.get(i).getActualDate().equals(today)&& usageList.get(i+1).getActualDate().equals(today)) {
-                long diff = (usageList.get(i+1).getTime().getTime() - usageList.get(i).getTime().getTime());
+        for (int i = 0; i < usageList.size(); i++) {
+            if (!usageList.get(i).getActualDate().equals(today) && usageList.get(i + 1).getActualDate().equals(today)) {
+                long diff = (usageList.get(i + 1).getTime().getTime() - usageList.get(i).getTime().getTime());
                 totalDiff += diff;
             }
         }
@@ -121,6 +123,7 @@ public class TransactionManage extends AppData {
 
     /**
      * Output all transactions of the current usera
+     *
      * @return All the transactions of the current user, ordered by transaction time
      */
     private static ArrayList<Transaction> findTransactionsByUser() {
@@ -134,6 +137,7 @@ public class TransactionManage extends AppData {
 
     /**
      * Output all transactions for displaying on the interface.
+     *
      * @return All transaction information to be displayed on the interface
      */
     public static String[][] getAllTransactions() {
@@ -153,6 +157,7 @@ public class TransactionManage extends AppData {
 
     /**
      * Output all transactions of the specific user for displaying on the interface.
+     *
      * @return All transaction information of the specific user
      */
     public static String[][] getUserTransactions(int id) {

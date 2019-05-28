@@ -8,6 +8,7 @@ package bin;
 public class FormatCheck {
     /**
      * Check if input is an ID
+     *
      * @param str input
      * @return yes or not
      */
@@ -24,6 +25,7 @@ public class FormatCheck {
 
     /**
      * Check ifinput is a character
+     *
      * @param c input
      * @return yes or not
      */
@@ -36,6 +38,7 @@ public class FormatCheck {
 
     /**
      * Check if input is a name
+     *
      * @param str input
      * @return yes or not
      */
@@ -52,6 +55,7 @@ public class FormatCheck {
 
     /**
      * Check if input is an email address
+     *
      * @param str input
      * @return yes or not
      */

@@ -171,13 +171,13 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
          */
         static class WaitForReturn implements Runnable {
             private static int i;
+            private static final int WAIT_TIME = 30;
 
             @Override
             public void run() {
-                waitForSec(5);
+                waitForSec(WAIT_TIME);
             }
 
-            @SuppressWarnings("Duplicates")
             private void waitForSec(int sec) {
                 for (i = 0; i < 100; i++) {
                     setSlotViewEmpty();
@@ -197,8 +197,6 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
                         selectLabel.setText("Please return to previous page");
                         helpButton.setText("Time expired");
 
-                        Windows.frame.validate();
-                        Windows.frame.repaint();
                         return;
                     }
                 }

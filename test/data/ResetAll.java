@@ -36,17 +36,17 @@ class ResetAll extends AppData {
         Station station2 = new Station("B", 8);
         Station station3 = new Station("C", 8);
         for(;i<=5;i++) {
-            Scooter scooter = new Scooter(i,0);
+            Scooter scooter = new Scooter(i);
             station1.addScooter(scooter);
             scooters.add(scooter);
         }
         for(;i<=10;i++) {
-            Scooter scooter = new Scooter(i,0);
+            Scooter scooter = new Scooter(i);
             station2.addScooter(scooter);
             scooters.add(scooter);
         }
         for(;i<=15;i++) {
-            Scooter scooter = new Scooter(i,0);
+            Scooter scooter = new Scooter(i);
             station3.addScooter(scooter);
             scooters.add(scooter);
         }
