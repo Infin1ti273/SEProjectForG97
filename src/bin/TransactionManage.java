@@ -15,11 +15,11 @@ public class TransactionManage extends AppData {
     /**
      * the single maximum use time of a user (in seconds)
      */
-    private static final int SINGLE_TIME = 10;
+    private static final int SINGLE_TIME = 60*30;
     /**
      * the total maximum use time of a user (in seconds)
      */
-    private static final int TOTAL_TIME = 30;
+    private static final int TOTAL_TIME = 3600*2;
     /**
      * the value transmit to the interface which means the user's usage did not expired
      */

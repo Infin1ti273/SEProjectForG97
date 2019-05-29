@@ -56,7 +56,8 @@ class ManagerPanel extends JPanel {
 		 * The action performed after the user clicked a button except "Register" because that is a GotoButton.
 		 * If the user clicked "User Information", he will be taken to the userInformationButton.
 		 * If the user clicked "Station Information", he will be taken to the stationInformationPanel.
-		 * @param e
+		 *
+		 * @param e button press event
 		 */
 		@Override
 		public void actionPerformed(ActionEvent e) {

@@ -132,7 +132,8 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 		/**
 		 * The action performed when user click the button.
 		 * If the user clicked "Help me pick one", the system will change the button to "Pick" and start the WaitForBorrow thread.
-		 * If the user ckicked "Pick", the system will prompt the user that the borrow is successful and write this transaction into system.
+		 * If the user clicked "Pick", the system will prompt the user that the borrow is successful and write this transaction into system.
+		 *
 		 * @param e Action performed by the mouse.
 		 */
 		public void actionPerformed(ActionEvent e) {
@@ -144,7 +145,7 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 				//creating thread
 				Thread thread = new Thread(new WaitForBorrow());
 				helpButton.setText("Pick");
-				//从左到右找到一个车
+				//find a scooter
 				for (site = 0; site <= 7; site++) {
 					if (AppState.getCurrentStation().getSlot()[site] != null) {
 						StationManage.chooseFlashSlot(site);

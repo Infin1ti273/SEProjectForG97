@@ -37,7 +37,6 @@ class UserLoginPanel extends JPanel {
 	 * The main Panel for login in the middle of the login panel.
 	 */
 	class MyPanel extends JPanel implements ActionListener {
-		@SuppressWarnings("Duplicates")
 		MyPanel() {
 			JButton submitButton = new JButton("Submit");
 			submitButton.setFont(new Font("Times New Roman", Font.PLAIN, 40));
@@ -71,7 +70,6 @@ class UserLoginPanel extends JPanel {
 					answerText.setText("");
 					feedbackLabel.setText("You haven't registered yet!");
 				} else {
-					//登录成功
 					answerText.setText("");
 					feedbackLabel.setText("Please type in your QM ID.");
 					Windows.goToPanel(userPanel);

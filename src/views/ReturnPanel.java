@@ -144,13 +144,13 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         public void actionPerformed(ActionEvent e) {
             String actionCommand = e.getActionCommand();
             /*
-			提示阶段
+			remind
 			 */
             if (actionCommand.equals("Help me pick an empty slot")) {
-                //创建线程
+                //create thread
                 Thread thread = new Thread(new WaitForReturn());
                 helpButton.setText("Return");
-                //从左到右找到一个空车位
+                //find an empty slot
                 for (site = 0; site <= 7; site++) {
                     if (AppState.getCurrentStation().getSlot()[site] == null) {
                         StationManage.chooseFlashSlot(site);

@@ -71,7 +71,6 @@ class ManagerLoginPanel extends JPanel {
 					answerText.setText("");
 					feedbackLabel.setText("You haven't registered yet!");
 				} else {
-					//登录成功
 					answerText.setText("");
 					feedbackLabel.setText("Please type in your manager ID.");
 					Windows.goToPanel(managerPanel);

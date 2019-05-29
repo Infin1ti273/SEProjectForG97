@@ -70,7 +70,7 @@ class ResetAll extends AppData {
         users.add(new User(111111111,"second","bbb@qmul.ac.uk"));
         users.add(new User(222222222,"third","ccc@qmul.ac.uk"));
         users.add(new User(333333333,"second","ddd@qmul.ac.uk"));
-        users.add(new User(444444444,"second","eee@qmul.ac.uk"));
+        users.add(new User(161188623,"Weipeng Shen","jp2016213556@qmul.ac.uk"));
         updateData();
 
     }
