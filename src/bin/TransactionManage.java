@@ -165,11 +165,8 @@ public class TransactionManage extends AppData {
         int rowSize = 0;
         for (Transaction transaction : transactions) {
             String[] row = transaction.toString().split(" ");
-            System.out.println(Integer.parseInt(row[1]));
-            System.out.println(id);
             if (Integer.parseInt(row[1]) == id) {
                 column.add(row);
-                System.out.println("1");
             }
             rowSize = row.length;
         }
