@@ -108,11 +108,6 @@ class MyAccountPanel extends JPanel implements PanelStateMonitor {
 			reportButton.addActionListener(this);
 		}
 
-		/**
-		 * Action performed when the user clicked "Pay My Fine" or "Check Report".
-		 * If the user clicked "Pay My Fine", the system will clear his fine and check if he has fine to pay.
-		 * @param e Action performed by the mouse.
-		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			if (actionCommand.equals("Pay My Fine")) {

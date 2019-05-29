@@ -27,10 +27,6 @@ class StationPanel extends JPanel {
 		this.setVisible(true);
 	}
 
-	/**
-	 * The main panel to be displayed in the middle, display the three button for the use to choose.
-	 * The three button will generate the userLoginPanel with different parameter of Station in order to tell the system which station is the user visiting.
-	 */
 	class MyPanel extends JPanel implements ActionListener {
 		MyPanel() {
 			GotoButton buttonA = new GotoButton("Station A", userLoginPanel);
@@ -51,11 +47,6 @@ class StationPanel extends JPanel {
 			this.add(buttonC);
 		}
 
-		/**
-		 * It will invoke the {@link StationManage#chooseStation(String)} to save the station visiting to the program state.
-		 *
-		 * @param e Action performed by the mouse
-		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			switch (actionCommand) {

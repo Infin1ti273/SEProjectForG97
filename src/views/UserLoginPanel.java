@@ -33,9 +33,6 @@ class UserLoginPanel extends JPanel {
 		this.setVisible(true);
 	}
 
-	/**
-	 * The main Panel for login in the middle of the login panel.
-	 */
 	class MyPanel extends JPanel implements ActionListener {
 		MyPanel() {
 			JButton submitButton = new JButton("Submit");
@@ -50,13 +47,6 @@ class UserLoginPanel extends JPanel {
 			this.add(submitButton);
 		}
 
-		/**
-		 * This is invoked after the user click 'submit'.
-		 * The system will check if the input format is correct.
-		 * If the format is correct, then it will check if the QM ID exist.
-		 *
-		 * @param e Action performed by the mouse.
-		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			if (actionCommand.equals("Submit")) {
@@ -78,9 +68,6 @@ class UserLoginPanel extends JPanel {
 		}
 	}
 
-	/**
-	 * The panel for reminder.
-	 */
 	class FeedbackPanel extends JPanel {
 		FeedbackPanel() {
 			feedbackLabel = new JLabel("Please type in your QM ID.");

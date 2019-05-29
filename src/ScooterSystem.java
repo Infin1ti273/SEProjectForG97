@@ -4,7 +4,7 @@ import views.Windows;
 /**
  * The main class of the program
  */
-public class Entrance {
+public class ScooterSystem {
 
     /**
      * The main method of the program.

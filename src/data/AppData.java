@@ -28,9 +28,6 @@ public class AppData {
      */
     protected static Vector<Transaction> transactions;
 
-    /*
-    Local file address
-     */
     private static final String USER_DIR = "./statics/users.xml";
     private static final String STATION_DIR = "./statics/stations.xml";
     private static final String SCOOTER_DIR = "./statics/scooters.xml";

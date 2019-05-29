@@ -129,13 +129,6 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 			helpButton.addActionListener(this);
 		}
 
-		/**
-		 * The action performed when user click the button.
-		 * If the user clicked "Help me pick one", the system will change the button to "Pick" and start the WaitForBorrow thread.
-		 * If the user clicked "Pick", the system will prompt the user that the borrow is successful and write this transaction into system.
-		 *
-		 * @param e Action performed by the mouse.
-		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			/*
@@ -175,10 +168,6 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 			 */
 		}
 
-		/**
-		 * The thread that makes the slot flash.
-		 * And wait for user to pick till the time runs out.
-		 */
 		static class WaitForBorrow implements Runnable {
 			private static int i;
 			private static final int WAIT_TIME = 30;

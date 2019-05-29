@@ -100,11 +100,11 @@ class RegisterInputPanel extends JPanel {
 			} else if (FormatCheck.isAddress(addText.getText()) == 0) {
 				checkLabel.setText("<html>Invalid email address. <br/>Example:qmul123_uk@qmul.ac.uk.</html>");
 			} else {
-				//判断注册信息是否重复
+				//if duplicate
 				if (!UserManage.registration(Integer.parseInt(idText.getText()), nameText.getText(), addText.getText())) {
 					checkLabel.setText("Duplicate ID or email address!");
 				} else {
-					//注册成功
+					//success
 					clear();
 					Windows.backToMenu();
 					createRegisterReminder();
@@ -112,10 +112,6 @@ class RegisterInputPanel extends JPanel {
 			}
 		}
 
-		/**
-		 * pop a window that suggests your registration is successful.
-		 * It is only a reminder with no real function.
-		 */
 		private void createRegisterReminder() {
 			JFrame littleFrame = new JFrame("Successful");
 			littleFrame.setSize(500, 500);

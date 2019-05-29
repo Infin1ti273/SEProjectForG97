@@ -24,7 +24,7 @@ public class FormatCheck {
     }
 
     /**
-     * Check ifinput is a character
+     * Check if input is a character
      *
      * @param c input
      * @return yes or not

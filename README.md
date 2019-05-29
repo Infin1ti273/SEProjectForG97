@@ -1,33 +1,38 @@
-# Project Title
+# QM scooter system
 
-One Paragraph of project description goes here
+The QM scooter system is the
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-To install this software, 
+To install this software, JRE8 must have been installed in your computer.
 
+To check if you have installed JRE8, please open the command line/terminal and input:
+
+Example:
 ```
-Give examples
+java -version
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+1) Enter the main folder of the software by command line/terminal:
 
-Say what the step will be
+Example: (If the software is in D:)
+```
+D:
+cd D:/ScooterSystem
+```
+
+Then input:
 
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+javac 
 ```
 
 End with an example of getting some data out of the system or using it for a little demo

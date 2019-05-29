@@ -29,9 +29,6 @@ class ManagerPanel extends JPanel {
 		this.setVisible(true);
 	}
 
-	/**
-	 * The mainPanel to be displayed in the middle showing the three button.
-	 */
 	class MainPanel extends JPanel implements ActionListener {
 		MainPanel() {
 			GotoButton registerButton = new GotoButton("Register", registerInputPanel);
@@ -52,13 +49,6 @@ class ManagerPanel extends JPanel {
 			stationButton.addActionListener(this);
 		}
 
-		/**
-		 * The action performed after the user clicked a button except "Register" because that is a GotoButton.
-		 * If the user clicked "User Information", he will be taken to the userInformationButton.
-		 * If the user clicked "Station Information", he will be taken to the stationInformationPanel.
-		 *
-		 * @param e button press event
-		 */
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
