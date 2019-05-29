@@ -8,6 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+/**
+ * Class UserPanel
+ * The Panel to be displayed after a user logged in successfully.
+ * The user can choose to borrow, return a scooter or to check his account.
+ */
 class UserPanel extends JPanel implements PanelStateMonitor {
     private BorrowPanel borrowPanel = new BorrowPanel();
     private ReturnPanel returnPanel = new ReturnPanel();
@@ -16,6 +21,9 @@ class UserPanel extends JPanel implements PanelStateMonitor {
     private NotHaveOnePanel notHaveOnePanel = new NotHaveOnePanel();
     private HaveFinePanel haveFinePanel = new HaveFinePanel();
 
+    /**
+     * The constructor of UserPanel
+     */
     UserPanel() {
         this.setLayout(new GridLayout(3, 1));
         this.add(new JPanel());
@@ -30,6 +38,9 @@ class UserPanel extends JPanel implements PanelStateMonitor {
 
     }
 
+    /**
+     * The main panel to be displayed in the middle for the user to choose service.
+     */
     class MainPanel extends JPanel implements ActionListener {
         MainPanel() {
             JButton takeButton = new JButton("TAKE");
@@ -50,6 +61,17 @@ class UserPanel extends JPanel implements PanelStateMonitor {
             this.add(accountButton);
         }
 
+        /**
+         *This is invoked once the user clicked a button, and take the user  to different Panel respectively.
+         * If the user clicked take and he hasn't borrowed one and showed a positive fine status, he will be taken to the borrowPanel.
+         * If he has, he will be taken to alreadyHaveOnePanel, which remind that the user has already borrowed one and have to return first.
+         * If he has fine to pay, he will be taken to the haveFinePanel, which remind that the user have fine to pay.
+         * If the user clicked return and he truly have borrowed one, he will be taken to the returnPanel.
+         * If the user doesn't have one, he will be taken to the notHaveOnePanel, which remind that the user don't have a scooter.
+         * If the user clicked my account, he will be taken to the myAccountPanel.
+         *
+         * @param e Action performed by the mouse.
+         */
         public void actionPerformed(ActionEvent e) {
             String actionCommand = e.getActionCommand();
             if (actionCommand.equals("TAKE")) {

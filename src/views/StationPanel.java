@@ -8,9 +8,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *  The StationPanel is the Panel going to display if the user choose his identity to be 'User'.
+ *  This Panel will dispalay A,B,C station for the user to choose which one he'd like to visit.
+ */
 class StationPanel extends JPanel {
 	private UserLoginPanel userLoginPanel = new UserLoginPanel();
 
+	/**
+	 * The constructor of the StationPanel.
+	 */
 	StationPanel() {
 		this.setLayout(new GridLayout(3, 1));
 		this.add(new JPanel());
@@ -20,7 +27,10 @@ class StationPanel extends JPanel {
 		this.setVisible(true);
 	}
 
-
+	/**
+	 * The main panel to be displayed in the middle, display the three button for the use to choose.
+	 * The three button will generate the userLoginPanel with different parameter of Station in order to tell the system which station is the user visiting.
+	 */
 	class MyPanel extends JPanel implements ActionListener {
 		MyPanel() {
 			GotoButton buttonA = new GotoButton("Station A", userLoginPanel);
@@ -41,6 +51,11 @@ class StationPanel extends JPanel {
 			this.add(buttonC);
 		}
 
+		/**
+		 * It will invoke the {@link StationManage#chooseStation(String)} to save the station visiting to the program state.
+		 *
+		 * @param e Action performed by the mouse
+		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			switch (actionCommand) {

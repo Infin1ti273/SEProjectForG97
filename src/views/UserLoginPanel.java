@@ -8,13 +8,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This Panel is for the user to log in.
+ * It is displayed after the user choose which station he'd like to visit.
+ */
 class UserLoginPanel extends JPanel {
-	//next state
 	private UserPanel userPanel = new UserPanel();
 
 	private JTextField answerText;
 	private JLabel feedbackLabel;
 
+	/**
+	 * The constructor of the UserLoginPanel.
+	 */
 	UserLoginPanel() {
 		JPanel myPanel = new MyPanel();
 		JPanel feedbackPanel = new FeedbackPanel();
@@ -27,7 +33,9 @@ class UserLoginPanel extends JPanel {
 		this.setVisible(true);
 	}
 
-
+	/**
+	 * The main Panel for login in the middle of the login panel.
+	 */
 	class MyPanel extends JPanel implements ActionListener {
 		@SuppressWarnings("Duplicates")
 		MyPanel() {
@@ -43,7 +51,13 @@ class UserLoginPanel extends JPanel {
 			this.add(submitButton);
 		}
 
-
+		/**
+		 * This is invoked after the user click 'submit'.
+		 * The system will check if the input format is correct.
+		 * If the format is correct, then it will check if the QM ID exist.
+		 *
+		 * @param e Action performed by the mouse.
+		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			if (actionCommand.equals("Submit")) {
@@ -66,6 +80,9 @@ class UserLoginPanel extends JPanel {
 		}
 	}
 
+	/**
+	 * The panel for reminder.
+	 */
 	class FeedbackPanel extends JPanel {
 		FeedbackPanel() {
 			feedbackLabel = new JLabel("Please type in your QM ID.");

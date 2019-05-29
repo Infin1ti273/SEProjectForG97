@@ -13,6 +13,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Class ReturnPanel
+ * It is the panel for user to return a scooter.
+ * It will dispaly 8 pic in representation of the 8 slot.
+ * And a button will be displayed to help the user pick one.
+ */
 public class ReturnPanel extends JPanel implements PanelStateMonitor {
     private static JPanel[] slotPanel;
     private static JLabel myLabel = new JLabel();
@@ -20,6 +26,9 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
     private static JButton helpButton;
     private static JPanel subPanel;
 
+    /**
+     * The constructor of ReturnPanel.
+     */
     ReturnPanel() {
         JPanel upperPanel = new UpperPanel();
         slotPanel = new JPanel[8];
@@ -37,11 +46,10 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
     }
 
     /**
-     * 界面后台信息的改动
-     * 直接影响界面内槽位的显示
-     * 站点必须在之前已经指定好，本类不要调用该方法
-     * 更新文本信息
-     * 适用于初次/再次进入该界面
+     * The modification of the background information of the interface will directly influence the display of slot in the interface.
+     * The station must be determined in advance, this class will not call the method.
+     * Update the text information.
+     * Apply to the initial visit to this interface or visit again.
      */
     @Override
     public void update() {
@@ -55,7 +63,7 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         if (!checkIsFull()) {
             myLabel.setText("Ready for return your scooter......\r\n");
             selectLabel.setText("Please use the one with flashing......");
-            helpButton.setText("Help me pick a empty slot");
+            helpButton.setText("Help me pick an empty slot");
         } else {
             myLabel.setText("No available slot in this station!\r\n");
             selectLabel.setText("Please check other station!");
@@ -63,6 +71,9 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         }
     }
 
+    /**
+     * Read the slot data from the background and set the picture.
+     */
     private static void refresh() {
         for (int i = 0; i <= 7; i++) {
             if (AppState.getCurrentStation().getSlot()[i] != null)
@@ -77,9 +88,9 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
     }
 
     /**
-     * 检查站点是否为满
+     * check if the station is empty
      *
-     * @return true-全满，false-有空位
+     * @return true-empty，false-not empty
      */
     private boolean checkIsFull() {
         for (int i = 0; i <= 7; i++) {
@@ -115,7 +126,7 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         int site;
 
         SubmitPanel() {
-            helpButton = new JButton("Help me pick a empty slot");
+            helpButton = new JButton("Help me pick an empty slot");
             this.setLayout(new GridLayout(2, 1));
             helpButton.setFont(new Font("Times New Roman", Font.PLAIN, 40));
             this.add(new JLabel(""));
@@ -123,12 +134,19 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
             helpButton.addActionListener(this);
         }
 
+        /**
+         * The action performed when user click the button.
+         * If the user clicked "Help me pick an empty slot", the system will change the button to "Return" and start the WaitForReturn thread.
+         * If the user ckicked "Return", the system will prompt the user that the return is successful and write this transaction into system.
+         *
+         * @param e Action performed by the mouse.
+         */
         public void actionPerformed(ActionEvent e) {
             String actionCommand = e.getActionCommand();
             /*
 			提示阶段
 			 */
-            if (actionCommand.equals("Help me pick a empty slot")) {
+            if (actionCommand.equals("Help me pick an empty slot")) {
                 //创建线程
                 Thread thread = new Thread(new WaitForReturn());
                 helpButton.setText("Return");
@@ -166,8 +184,9 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
             //return time expired
         }
 
-        /*
-        闪光线程
+        /**
+         * The thread that makes the slot flash.
+         * And wait for user to pick a slot till the time runs out.
          */
         static class WaitForReturn implements Runnable {
             private static int i;
@@ -209,7 +228,7 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         }
 
         /**
-         * 将目标槽位的图片修改为：null-无灯
+         * Modify the target slot's pic to: null-no-light.
          */
         private static void setSlotViewEmpty() {
             JPanel slot = slotPanel[AppState.getCurrentSlot()];
@@ -219,7 +238,7 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
         }
 
         /**
-         * 将目标槽位的图片修改为：无车-有灯
+         * Modify the target slot's pic to: no-car-have-light
          */
         private static void setSlotViewEmptyFlash() {
             JPanel slot = slotPanel[AppState.getCurrentSlot()];

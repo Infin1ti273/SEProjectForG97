@@ -4,6 +4,10 @@ import views.components.ReturnButton;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * If the user clicked return and he haven't borrowed one, he will be taken to the here.
+ * which remind that the user hasn't borrowed one.
+ */
 class NotHaveOnePanel extends JPanel {
 	NotHaveOnePanel() {
 		this.setLayout(new GridLayout(3, 1));

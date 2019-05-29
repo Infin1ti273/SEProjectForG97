@@ -7,7 +7,10 @@ import views.components.PanelStateMonitor;
 import javax.swing.*;
 import java.awt.*;
 
-
+/**
+ * Class StationInformationPanel.
+ * It is the panel for displaying the station info.
+ */
 public class StationInformationPanel extends JPanel implements PanelStateMonitor {
 	/**
 	 * Create the panel.

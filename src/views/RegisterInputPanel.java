@@ -8,12 +8,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Class RegisterInputPanel.
+ * It is the user input panel for registration.
+ */
 class RegisterInputPanel extends JPanel {
 	private JTextField idText;
 	private JTextField nameText;
 	private JTextField addText;
 	private JLabel checkLabel;
 
+	/**
+	 * Constructor of RegisterInputPanel.
+	 */
 	RegisterInputPanel() {
 		JPanel idPanel = new IdPanel();
 		JPanel namePanel = new NamePanel();
@@ -106,9 +113,8 @@ class RegisterInputPanel extends JPanel {
 		}
 
 		/**
-		 * 弹出一个提醒注册成功的窗口
-		 * 只有提示功能，无实际用处
-		 * （未实现）鼠标单击任意区域即可让窗口消失
+		 * pop a window that suggests your registration is successful.
+		 * It is only a reminder with no real function.
 		 */
 		private void createRegisterReminder() {
 			JFrame littleFrame = new JFrame("Successful");
@@ -150,7 +156,7 @@ class RegisterInputPanel extends JPanel {
 	}
 
 	/**
-	 * 界面初始化（清空所有输入框和标签）
+	 * Initiate the interface(clear all the input box and tags).
 	 */
 	private void clear() {
 		idText.setText("");

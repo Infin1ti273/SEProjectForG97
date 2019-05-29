@@ -8,12 +8,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * The user will be taken here if he clicked manager at the identityChoosePanel.
+ * It is for the user to authenticate his nanager identity.
+ */
 class ManagerLoginPanel extends JPanel {
 	private ManagerPanel managerPanel = new ManagerPanel();
 
 	private JTextField answerText;
 	private JLabel feedbackLabel;
 
+	/**
+	 * The constructor of the ManagerLoginPanel.
+	 */
 	ManagerLoginPanel() {
 		JPanel myPanel = new MyPanel();
 		JPanel feedbackPanel = new FeedbackPanel();
@@ -26,6 +33,9 @@ class ManagerLoginPanel extends JPanel {
 		this.setVisible(true);
 	}
 
+	/**
+	 * The main Panel for login in the middle of the login panel.
+	 */
 	class MyPanel extends JPanel implements ActionListener {
 		@SuppressWarnings("Duplicates")
 		MyPanel() {
@@ -41,7 +51,13 @@ class ManagerLoginPanel extends JPanel {
 			this.add(submitButton);
 		}
 
-
+		/**
+		 * This is invoked after the user click 'submit'.
+		 * The system will check if the input format is correct.
+		 * If the format is correct, then it will check if the manager ID exist.
+		 *
+		 * @param e Action performed by the mouse.
+		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			if (actionCommand.equals("Submit")) {

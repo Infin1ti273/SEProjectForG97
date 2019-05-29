@@ -9,6 +9,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This Panel is for displaying the users' account state.
+ */
 class MyAccountPanel extends JPanel implements PanelStateMonitor {
 	private ReportPanel reportPanel = new ReportPanel();
 	private JLabel fineText = new JLabel();
@@ -16,6 +19,9 @@ class MyAccountPanel extends JPanel implements PanelStateMonitor {
 	private JLabel nameText = new JLabel();
 	private JLabel addText = new JLabel();
 
+	/**
+	 * The constructor of MyAccountPanel.
+	 */
 	MyAccountPanel() {
 		JPanel idPanel = new IdPanel();
 		JPanel namePanel = new NamePanel();
@@ -34,6 +40,9 @@ class MyAccountPanel extends JPanel implements PanelStateMonitor {
 		this.setVisible(true);
 	}
 
+	/**
+	 * Update the data from the AppState.
+	 */
 	@Override
 	public void update() {
 		fineText.setText(AppState.getCurrentUser().isNeedToPay().equals("true") ? "Be fined" : "Not be fined");
@@ -99,6 +108,11 @@ class MyAccountPanel extends JPanel implements PanelStateMonitor {
 			reportButton.addActionListener(this);
 		}
 
+		/**
+		 * Action performed when the user clicked "Pay My Fine" or "Check Report".
+		 * If the user clicked "Pay My Fine", the system will clear his fine and check if he has fine to pay.
+		 * @param e Action performed by the mouse.
+		 */
 		public void actionPerformed(ActionEvent e) {
 			String actionCommand = e.getActionCommand();
 			if (actionCommand.equals("Pay My Fine")) {
