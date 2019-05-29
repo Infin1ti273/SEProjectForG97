@@ -36,6 +36,8 @@ public class TransactionManage extends AppData {
     /**
      * Generate a transaction based on current user, scooter and time
      * The transaction can only created when the user is holding the scooter
+     *
+     * @param type transaction type
      */
     static void generateTransaction(String type) {
         Date time = new Date();
@@ -158,6 +160,7 @@ public class TransactionManage extends AppData {
     /**
      * Output all transactions of the specific user for displaying on the interface.
      *
+     * @param id user id
      * @return All transaction information of the specific user
      */
     public static String[][] getUserTransactions(int id) {

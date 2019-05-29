@@ -53,13 +53,8 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
      */
     @Override
     public void update() {
-        /*
-		从后台读取slot数据并设置图片
-		 */
         refresh();
-        /*
-		预判断slot整体情况
-		 */
+
         if (!checkIsFull()) {
             myLabel.setText("Ready for return your scooter......\r\n");
             selectLabel.setText("Please use the one with flashing......");
