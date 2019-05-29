@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Vector;
 
 class ResetAll extends AppData {
+    /**
+     * reset transaction, station, scooter and user information
+     */
     @Test
     void resetAll() {
         testResetTransaction();
@@ -13,7 +16,7 @@ class ResetAll extends AppData {
     }
 
     /**
-     * 将transaction重置为初始状态（什么都没有）
+     * Reset transaction to init state (says nothing)
      */
     @Test
     void testResetTransaction() {
@@ -22,8 +25,8 @@ class ResetAll extends AppData {
     }
 
     /**
-     * 初始化站点信息
-     * （每个站点5辆车，占前五个槽位）
+     * Initialize Station information
+     * (Every station has 5 scooters, which occupy the first 5 slots)
      */
     @Test
     void testResetStationAndScooter() {
@@ -57,9 +60,8 @@ class ResetAll extends AppData {
     }
 
     /**
-     * 重置用户信息
-     * 注意只在需要重新导入数据时使用
-     * 需要同时重置站点信息
+     * Reset user information, Only be used when need to import data again
+     * Need to reset station information simultaneously
      */
     @Test
     void testResetUserData() {

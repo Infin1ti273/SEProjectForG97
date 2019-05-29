@@ -16,11 +16,17 @@ class testUserManage extends AppData {
         updateData();
 	}
 
+    /**
+     * Test registration function
+     */
     @Test
     void testRegistration() {
     	assertTrue(UserManage.registration(123456700,"first","aaafdas@qmul.ac.uk"));
     }
 
+    /**
+     * test ifDuplicate function
+     */
     @Test
     void testIfDuplicate() {
     	UserManage.registration(123456700,"first","aaafdas@qmul.ac.uk");

@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 
+    /**
+     * Test create a new user
+     */
     @Test
     void testCreateUser() {
         User user = new User(161188896,"Shizun Wang", "111@163.com");

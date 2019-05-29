@@ -28,7 +28,7 @@
      <string>needToPay</string>
      <void method="set">
       <object idref="User0"/>
-      <string>false</string>
+      <string>true</string>
      </void>
     </void>
    </object>
@@ -60,7 +60,7 @@
      <string>needToPay</string>
      <void method="set">
       <object idref="User1"/>
-      <string>false</string>
+      <string>true</string>
      </void>
     </void>
    </object>
