@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
+ * Boundary Class
  * If the user clicked return and he haven't borrowed one, he will be taken to the here.
  * which remind that the user hasn't borrowed one.
  */

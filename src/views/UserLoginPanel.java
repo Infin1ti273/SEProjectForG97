@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
+ * Boundary Class
  * This Panel is for the user to log in.
  * It is displayed after the user choose which station he'd like to visit.
  */

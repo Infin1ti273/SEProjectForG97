@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * IdentityChoosePanel Class.
+ * Boundary Class
  * This is the initial panel of the whole system.
  * This is where you get to choose the identity of yours.
  */

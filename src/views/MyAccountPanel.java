@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
+ * Boundary Class
  * This Panel is for displaying the users' account state.
  */
 class MyAccountPanel extends JPanel implements PanelStateMonitor {

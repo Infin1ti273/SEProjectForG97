@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Class BorrowPanel
+ * Boundary Class
  * It is the panel for user to borrow a scooter.
  * It will dispaly 8 pic in representation of the 8 slot.
  * And a button will be displayed to help the user pick one.

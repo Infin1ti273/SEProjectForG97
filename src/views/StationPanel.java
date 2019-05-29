@@ -9,8 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- *  The StationPanel is the Panel going to display if the user choose his identity to be 'User'.
- *  This Panel will dispalay A,B,C station for the user to choose which one he'd like to visit.
+ * Boundary Class
+ * The StationPanel is the Panel going to display if the user choose his identity to be 'User'.
+ * This Panel will dispalay A,B,C station for the user to choose which one he'd like to visit.
  */
 class StationPanel extends JPanel {
 	private UserLoginPanel userLoginPanel = new UserLoginPanel();

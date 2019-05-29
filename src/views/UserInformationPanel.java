@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Class UserInformationPanel
+ * Boundary Class
  * This is the panel for displaying the user information.
  * It will display all the event created by the system and its detail information.
  */

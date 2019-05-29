@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Class ManagerPanel
+ * Boundary Class
  * It is displayed after the manager logged in successfully.
  * There will be three function for the manager to choose: Register, User information and Station Information.
  */

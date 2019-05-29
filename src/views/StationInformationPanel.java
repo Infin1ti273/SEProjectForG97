@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
+ * Boundary Class
  * Class StationInformationPanel.
  * It is the panel for displaying the station info.
  */

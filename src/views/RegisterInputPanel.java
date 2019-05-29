@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Class RegisterInputPanel.
+ * Boundary Class
  * It is the user input panel for registration.
  */
 class RegisterInputPanel extends JPanel {

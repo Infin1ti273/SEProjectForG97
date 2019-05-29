@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- * Class UserPanel
+ * Boundary Class
  * The Panel to be displayed after a user logged in successfully.
  * The user can choose to borrow, return a scooter or to check his account.
  */

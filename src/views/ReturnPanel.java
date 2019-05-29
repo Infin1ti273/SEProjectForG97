@@ -14,7 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Class ReturnPanel
+ * Boundary Class
  * It is the panel for user to return a scooter.
  * It will dispaly 8 pic in representation of the 8 slot.
  * And a button will be displayed to help the user pick one.

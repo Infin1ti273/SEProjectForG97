@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Class ReportPanel
+ * Boundary Class
  * It is for displaying the user's weekly report.
  */
 class ReportPanel extends JPanel implements PanelStateMonitor {
