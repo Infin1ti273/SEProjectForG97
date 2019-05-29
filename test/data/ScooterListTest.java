@@ -7,7 +7,7 @@ import java.util.Vector;
 
 class ScooterListTest extends AppData {
     /**
-     * 测试是否能读取车的信息
+     * Test if system could read the information of scooter
      */
     @Test
     void testGetScooter() {

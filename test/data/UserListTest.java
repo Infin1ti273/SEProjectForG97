@@ -9,10 +9,9 @@ import java.util.Vector;
 
 
 class UserListTest extends AppData {
-    /*
-     * 向用户信息列表中添加新用户（用户信息符合格式）
-     * 每次添加成功（不是重复信息）后，返回一个true
-     * 最后打印一次所有用户的qm号来验证用户信息是否添加
+
+    /**
+     * Test register a new user to user list
      */
     @Test
     void testRegistration() {

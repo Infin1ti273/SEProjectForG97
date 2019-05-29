@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ScooterTest {
 
+    /**
+     * Test create a scooter
+     */
     @Test
     void testCreateScooter() {
         Scooter scooter = new Scooter(2333);
