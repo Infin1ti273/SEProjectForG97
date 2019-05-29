@@ -8,13 +8,13 @@ import java.awt.*;
 import java.util.Stack;
 
 /**
- * 界面测试类修改到此处
+ * Test GUI
  */
 class PanelTest {
-    //return panel - 应用于所有的界面
+    // return panel - apply to all GUI
     private static JPanel upperPanel = new JPanel();
 
-    //stack - 实现返回键功能
+    // stack - implement return function
     private static Stack<JPanel> stack = new Stack<>();
 
     private static JFrame frame = new JFrame("QM scooter system");
