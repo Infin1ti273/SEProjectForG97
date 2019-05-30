@@ -1,12 +1,10 @@
-# QM scooter system
+# Scooter Sharing System
 
-The QM scooter system is the
+Scooter sharing system is a system of managing QM scooter rental service for members of QMUL.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-See deployment for notes on how to deploy the project on a live system.
+All files of scooter sharing system are placed in the folder "ScooterSystem"
 
 ### Prerequisites
 
@@ -21,7 +19,7 @@ java -version
 
 ### Installing
 
-1) Enter the main folder of the software by command line/terminal:
+(1) Enter the main folder of the software by command line/terminal:
 
 Example: (If the software is in D:)
 ```
@@ -29,65 +27,40 @@ D:
 cd D:/ScooterSystem
 ```
 
-Then input:
+(2) Then input:
 
 ```
-javac 
+javac ScooterSystem.java
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+To compile the source code.
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+After the source code is completed, you can open the system by inputting:
 
 ```
-Give an example
-```
+java ScooterSystem
+``` 
 
-### And coding style tests
+When you are in the folder "ScooterSystem".
 
-Explain what these tests test and why
+## About tests
 
-```
-Give an example
-```
+The test source code is in "ScooterSystem/test". To run tests, you need to use
+command line/terminal to enter the folder of test code.
 
-## Deployment
+The test code is not compiled so you need to compile it as installing 
+the software.
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+If you are not a developer, we suggest you not running those codes.  
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Shizun Wang** - QM number: 161188896
+* **Weipeng Shen** - QM number: 161188623
+* **Yufan Wang** - QM number: 161187888
+* **Meiyu Chen** - QM number: 161189332
+* **Tianqi Zhu** - QM number: 151007257
+* **Ruyang Liu** - QM number: 161187718
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 

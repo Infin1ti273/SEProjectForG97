@@ -4,16 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserTest {
+/**
+ * Class for testing User's function
+ */
+class testUser {
 
     /**
      * Test create a new user
      */
     @Test
     void testCreateUser() {
-        User user = new User(161188896,"Shizun Wang", "111@163.com");
+        User user = new User(161188896,"Shizun Wang", "jp2016213584@qmul.ac.uk");
         assertEquals(161188896, user.getQmNumber());
         assertEquals("Shizun Wang", user.getFullName());
-        assertEquals("111@163.com", user.getEmail());
+        assertEquals("jp2016213584@qmul.ac.uk", user.getEmail());
     }
 }

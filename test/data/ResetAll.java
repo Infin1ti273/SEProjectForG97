@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Vector;
 
+/**
+ * Reset all the program's data
+ */
 class ResetAll extends AppData {
     /**
      * reset transaction, station, scooter and user information
@@ -66,12 +69,12 @@ class ResetAll extends AppData {
     @Test
     void testResetUserData() {
         users = new Vector<>();
-        users.add(new User(123456789,"first","aaa@qmul.ac.uk"));
-        users.add(new User(111111111,"second","bbb@qmul.ac.uk"));
-        users.add(new User(222222222,"third","ccc@qmul.ac.uk"));
-        users.add(new User(333333333,"second","ddd@qmul.ac.uk"));
+        users.add(new User(161188896, "Shizun Wang", "jp2016213584@qmul.ac.uk"));
+        users.add(new User(161189332,"Meiyu Chen","jp2016213628@qmul.ac.uk"));
+        users.add(new User(151007257,"Tianqi Zhu","jp2015213451@qmul.ac.uk"));
+        users.add(new User(333333333,"Ruyang Liu","jp2016213460@qmul.ac.uk"));
         users.add(new User(161188623,"Weipeng Shen","jp2016213556@qmul.ac.uk"));
+        users.add(new User(161187888, "Yufan Wang", "jp2016213479@qmul.ac.uk"));
         updateData();
-
     }
 }

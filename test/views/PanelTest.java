@@ -1,5 +1,7 @@
 package views;
 
+import bin.AppState;
+import bin.StationManage;
 import data.AppData;
 import views.components.ReturnButton;
 
@@ -19,7 +21,7 @@ class PanelTest {
 
     private static JFrame frame = new JFrame("QM scooter system");
 
-    private static StationInformationPanel testPanel = new StationInformationPanel();             //测试用Panel写在这里
+    private static IdentityChoosePanel testPanel = new IdentityChoosePanel();           //panel for testing
 
     public static void main(String[] args) {
         new AppData();
@@ -35,7 +37,8 @@ class PanelTest {
     }
 
     private static void setState() {
-        testPanel.update();
+        StationManage.chooseStation("A");
+//        testPanel.update();
     }
 
     private static void init() {

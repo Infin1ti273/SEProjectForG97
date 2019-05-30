@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 /**
  * Boundary Class
  * It is the panel for user to borrow a scooter.
- * It will dispaly 8 pic in representation of the 8 slot.
+ * It will display 8 pic in representation of the 8 slot.
  * And a button will be displayed to help the user pick one.
  */
 public class BorrowPanel extends JPanel implements PanelStateMonitor {
@@ -94,7 +94,6 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 		return true;
 	}
 
-
 	class UpperPanel extends JPanel {
 		UpperPanel() {
 			myLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
@@ -170,7 +169,7 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 
 		static class WaitForBorrow implements Runnable {
 			private static int i;
-			private static final int WAIT_TIME = 30;
+			private static final int WAIT_TIME = 60;
 
 			@Override
 			public void run() {
@@ -191,7 +190,7 @@ public class BorrowPanel extends JPanel implements PanelStateMonitor {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					if (i == (sec-1)) {
+					if (i == (sec - 1)) {
 						myLabel.setText("Time expired\r\n");
 						selectLabel.setText("Please return to previous page ");
 						helpButton.setText("Time expired");

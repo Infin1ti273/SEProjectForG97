@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 /**
  * Boundary Class
  * It is the panel for user to return a scooter.
- * It will dispaly 8 pic in representation of the 8 slot.
+ * It will display 8 pic in representation of the 8 slot.
  * And a button will be displayed to help the user pick one.
  */
 public class ReturnPanel extends JPanel implements PanelStateMonitor {
@@ -175,7 +175,7 @@ public class ReturnPanel extends JPanel implements PanelStateMonitor {
 
         static class WaitForReturn implements Runnable {
             private static int i;
-            private static final int WAIT_TIME = 30;
+            private static final int WAIT_TIME = 60;
 
             @Override
             public void run() {
