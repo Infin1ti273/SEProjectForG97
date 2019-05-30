@@ -1,7 +1,5 @@
 package bin;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import data.AppData;
 import org.junit.jupiter.api.Test;
 
